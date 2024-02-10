@@ -10,7 +10,7 @@ app = Flask(__name__,template_folder='templates', static_folder='static')
 def about():
     return render_template('about.html')
 
-@app.route('/]')
+@app.route('/')
 def btsp():
     return render_template('index3.html')
  
