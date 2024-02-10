@@ -1,0 +1,72 @@
+/* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style the logo */
+.logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+    nav {
+        display: none; /* Hide the navigation menu by default */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute;
+        top: 60px; /* Adjust the distance from the top */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+    }
+
+    nav.show {
+        display: flex; /* Show the navigation menu when needed */
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    /* Hamburger icon for mobile navigation */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
