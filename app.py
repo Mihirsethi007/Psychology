@@ -13,6 +13,10 @@ def about():
 @app.route('/')
 def btsp():
     return render_template('index3.html')
+
+@app.route('/demo1')
+def demo():
+    return render_template('demo1.html')
  
 if __name__ == "__main__":
     app.run()
