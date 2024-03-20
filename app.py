@@ -23,5 +23,5 @@ def id4():
     return render_template('index4.html')
  
 if __name__ == "__main__":
-    # app.run()
-    app.run(debug=True, host='localhost', port=5001)
+    app.run()
+    # app.run(debug=True, host='localhost', port=5001)
