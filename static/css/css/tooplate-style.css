@@ -4,6 +4,12 @@ Template 2098 Health
 
 http://www.tooplate.com/view/2098-health
 
+shades from logo
+#BF4974
+#D95988
+#A6778D
+#BFA8B5
+#A3D9CF
 */
 
   @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
@@ -12,6 +18,7 @@ http://www.tooplate.com/view/2098-health
     background: #ffffff;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    
   }
 
 
@@ -351,7 +358,7 @@ http://www.tooplate.com/view/2098-health
   }
 
   .navbar-default .navbar-nav > li a:hover {
-    color: #393939 !important;
+    color: #A3D9CF !important;
   }
 
   .navbar-default .navbar-nav > li > a:hover,
@@ -452,24 +459,38 @@ http://www.tooplate.com/view/2098-health
   }
 
   .slider .item-first {
-    background-image: url(/static/img/images/slider1.jpg);
+    background-image: url(/static/img/slider-1-3.jpg);
   }
 
   .slider .item-second {
-    background-image: url(/static/img/images/slider2.jpg);
+    background-image: url(/static/img/slider-1-1.jpg);
   }
 
   .slider .item-third {
-    background-image: url(/static/img/images/slider3.jpg);
+    background-image: url(/static/img/slider-1-1.jpg);
   }
 
+    /*---------------------------------------
+      WHY              
+  -----------------------------------------*/
+  #why {
+    /* background-color: #CE5079; */
+    /* background-color: #fff; */
+    /* background-color: #e989a9; */
+    /* background-color: #D95988; */
+    background-color: #A3D9CF;
+    /* background: url('/static/img/images/about-four-img-1.jpg')  no-repeat top center; */
+    /* background-size: cover; */
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
 
   /*---------------------------------------
       ABOUT              
   -----------------------------------------*/
 
   #about {
-    background: url('/static/img/images/about-bg.jpg') no-repeat top center;
+    /* background: url('/static/img/images/about-bg.jpg') no-repeat top center; */
     background-size: cover;
     padding-top: 150px;
     padding-bottom: 150px;
@@ -941,6 +962,44 @@ http://www.tooplate.com/view/2098-health
     color: #ffffff;
   }
 
+
+  /* 
+  materials 
+  */
+
+  .section-title_title span {
+    position: relative;
+    display: inline-block;
+  }
+
+  .section-title_title span:before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    width: 30px;
+    right: -30px;
+    height: 26px;
+    background-image: url('/static/img/images/section-title-shape.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    
+    animation-name: MoveUpDown;
+    
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    
+    animation-timing-function: linear;
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
 
   /*---------------------------------------
      RESPONSIVE STYLES              

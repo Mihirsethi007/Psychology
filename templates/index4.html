@@ -3,18 +3,11 @@
 <head>
 
      <title>Theraply - Your Daily Therapy</title>
-<!--
-
-Template 2098 Health
-
-http://www.tooplate.com/view/2098-health
-
--->
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="description" content="">
      <meta name="keywords" content="">
-     <meta name="author" content="Tooplate">
+     <meta name="author" content="Mihir">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
      <link rel="stylesheet" href="{{ url_for('static', filename='css/css/bootstrap.min.css') }}">
@@ -30,24 +23,7 @@ http://www.tooplate.com/view/2098-health
     
 
      <style>
-        .custom-btn {
-            background-color: #BF4974;
-            color: #9BD4CB;
-        }
 
-        .custom-btn:hover {
-            background-color: #9BD4CB;
-            /* Invert background color on hover */
-            color: #BF4974;
-            /* Invert text color on hover */
-        }
-
-        .dark_shade{
-            color:#BF4974
-        }
-        .light_shade{
-            color:#9BD4CB
-        }
      </style>
 
 </head>
@@ -105,10 +81,11 @@ http://www.tooplate.com/view/2098-health
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right ">
                         <li><a href="#top" class="smoothScroll " style=" color:white">Home</a></li>
+                        <li><a href="#why" class="smoothScroll " style=" color:white">Why Theraply</a></li>
                         <li><a href="#about" class="smoothScroll " style=" color:white">About Us</a></li>
                         <li><a href="#team" class="smoothScroll " style=" color:white">Services</a></li>
                          <li><a href="#news" class="smoothScroll " style=" color:white">Resources</a></li>
-                         <li><a href="#google-map" class="smoothScroll " style=" color:white">Portfolio</a></li>
+                         <li><a href="#testimonials" class="smoothScroll " style=" color:white">Testimonials</a></li>
                          <li class="appointment-btn "><a href="#appointment" style=" color:white">Make an appointment</a></li>
                     </ul>
                </div>
@@ -123,7 +100,7 @@ http://www.tooplate.com/view/2098-health
                <div class="row">
 
                          <div class="owl-carousel owl-theme">
-                              <div class="item item-first">
+                              <div class="item item-first img-fluid">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>The best project you will ever work on is yourself.</h3>
@@ -133,20 +110,20 @@ http://www.tooplate.com/view/2098-health
                                    </div>
                               </div>
 
-                              <div class="item item-second">
+                              <div class="item item-second img-fluid">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Aenean luctus lobortis tellus</h3>
-                                             <h1>New Lifestyle</h1>
+                                             <h3>Your path to mental wellness</h3>
+                                             <h1>Welcome to Theraply</h1>
                                              <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
                                         </div>
                                    </div>
                               </div>
 
-                              <div class="item item-third">
+                              <div class="item item-third img-fluid">
                                    <div class="caption">
                                         <div class="col-md-offset-1 col-md-10">
-                                             <h3>Pellentesque nec libero nisi</h3>
+                                             <h3></h3>
                                              <h1>Your Health Benefits</h1>
                                              <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
                                         </div>
@@ -158,6 +135,30 @@ http://www.tooplate.com/view/2098-health
           </div>
      </section>
 
+     <!-- WHY -->
+     <section id="why">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp section-title_title" data-wow-delay="0.6s">Why Theraply <span>?</span></h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p style="font-family: 'Poppins', serif; font: weight 400px; font-size:22px; padding:10px; color:black; background-color:rgba(255,255,255, 0.1); border-radius: 10px; ">If you are starting with the therapy for the first time, Congratulations! You’ve taken a huge step towards caring for yourself. Taking therapy is an empowering choice, a commitment to your own wellbeing and a step towards a healthier, happier you. Remember taking the first step toward therapy is a courageous decision and we are here to support you every step of the way. At Theraply your mental well being is our priority and together we can build a foundation for a brighter and healthier future. With Theraply you rewrite your story for empowerment and your brighter tomorrow starts here. </p>
+                              </div>
+                              <a class="button appointment-btn center" href="#appointment" style="background-color: #CE5079;color: #9BD4CB;"> Make an Appointment
+                                   
+                              </a>
+                              
+                         </div>
+                    </div>
+                    <div class = "col-md-6 col-sm-6">
+                         <img src="{{ url_for('static', filename='img/images/about-four-img-1.jpg') }}" class="img-responsive" alt="">
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
 
      <!-- ABOUT -->
      <section id="about">
@@ -166,16 +167,15 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Your <i class="fa fa-h-square"></i>ealth Center</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">About us</h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
-                                   <p>Aenean luctus lobortis tellus, vel ornare enim molestie condimentum. Curabitur lacinia nisi vitae velit volutpat venenatis.</p>
-                                   <p>Sed a dignissim lacus. Quisque fermentum est non orci commodo, a luctus urna mattis. Ut placerat, diam a tempus vehicula.</p>
+                                   <p>Welcome to Theraply, your path to mental wellness. Here, we understand the importance of mental well being and are dedicated to providing exceptional therapy services tailored to your unique needs. We envision collaborative partnerships with parents, educators, and the community to create a network of support around each child. By offering evidence-based practices, continuous education, and preventive strategies, we strive to equip families with the skills to navigate life's challenges, fostering a generation of emotionally resilient and empowered individuals.</p>
+                                   <p>With a wealth of experience and a compassionate approach, we create a safe and supportive space for you to explore, heal and grow.  We believe in the power of individualized care and work collaboratively with you to develop personalized treatment plans that address your specific concerns, goals and preferences. Our holistic approach considers the mind - body connection, promoting overall well being. We help you develop not only coping strategies but also lifestyle adjustments that contribute to long term mental health. </p>
                               </div>
                               <figure class="profile wow fadeInUp" data-wow-delay="1s">
-                                   <img src="{{ url_for('static', filename='img/images/author-image.jpg') }}" class="img-responsive" alt="">
                                    <figcaption>
-                                        <h3>Dr. Neil Jackson</h3>
-                                        <p>General Principal</p>
+                                        <h3>Tarranum Sethi</h3>
+                                        <p>Professional Therapist</p>
                                    </figcaption>
                               </figure>
                          </div>
@@ -193,7 +193,7 @@ http://www.tooplate.com/view/2098-health
 
                     <div class="col-md-6 col-sm-6">
                          <div class="about-info">
-                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Our Doctors</h2>
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">How therapy session look like?</h2>
                          </div>
                     </div>
 
@@ -204,8 +204,8 @@ http://www.tooplate.com/view/2098-health
                               <img src="{{ url_for('static', filename='img/images/team-image1.jpg') }}" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Nate Baston</h3>
-                                        <p>General Principal</p>
+                                        <h3>Individual therapy </h3>
+                                        <!-- <p>General Principal</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> 010-020-0120</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">general@company.com</a></p>
@@ -213,7 +213,7 @@ http://www.tooplate.com/view/2098-health
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-linkedin-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
+                                        </ul> -->
                                    </div>
 
                          </div>
@@ -224,8 +224,8 @@ http://www.tooplate.com/view/2098-health
                               <img src="{{ url_for('static', filename='img/images/team-image2.jpg') }}" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Jason Stewart</h3>
-                                        <p>Pregnancy</p>
+                                        <h3>Parental counseling </h3>
+                                        <!-- <p>Pregnancy</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> 010-070-0170</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
@@ -234,7 +234,7 @@ http://www.tooplate.com/view/2098-health
                                              <li><a href="#" class="fa fa-facebook-square"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
                                              <li><a href="#" class="fa fa-flickr"></a></li>
-                                        </ul>
+                                        </ul> -->
                                    </div>
 
                          </div>
@@ -245,8 +245,8 @@ http://www.tooplate.com/view/2098-health
                               <img src="{{ url_for('static', filename='img/images/team-image3.jpg') }}" class="img-responsive" alt="">
 
                                    <div class="team-info">
-                                        <h3>Miasha Nakahara</h3>
-                                        <p>Cardiology</p>
+                                        <h3>Early Intervention</h3>
+                                        <!-- <p>Cardiology</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> 010-040-0140</p>
                                              <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
@@ -254,7 +254,7 @@ http://www.tooplate.com/view/2098-health
                                         <ul class="social-icon">
                                              <li><a href="#" class="fa fa-twitter"></a></li>
                                              <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                        </ul>
+                                        </ul> -->
                                    </div>
 
                          </div>
@@ -344,6 +344,84 @@ http://www.tooplate.com/view/2098-health
           </div>
      </section>
 
+     <!-- Testimonials -->
+     <section id="testimonials" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Testimonials</h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- Testimonial THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="news-detail.html">
+                                   <img src="{{ url_for('static', filename='img/images/news-image1.jpg') }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>March 08, 2018</span>
+                                   <h3><a href="news-detail.html">About Amazing Technology</a></h3>
+                                   <p>Maecenas risus neque, placerat volutpat tempor ut, vehicula et felis.</p>
+                                   <div class="author">
+                                        <img src="{{ url_for('static', filename='img/images/author-image.jpg') }}" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jeremie Carlson</h5>
+                                             <p>CEO / Founder</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- Testimonial THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                   <img src="{{ url_for('static', filename='img/images/news-image2.jpg') }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>February 20, 2018</span>
+                                   <h3><a href="news-detail.html">Introducing a new healing process</a></h3>
+                                   <p>Fusce vel sem finibus, rhoncus massa non, aliquam velit. Nam et est ligula.</p>
+                                   <div class="author">
+                                        <img src="{{ url_for('static', filename='img/images/author-image.jpg') }}" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jason Stewart</h5>
+                                             <p>General Director</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- Testimonial THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="news-detail.html">
+                                   <img src="{{ url_for('static', filename='img/images/news-image3.jpg') }}" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span>January 27, 2018</span>
+                                   <h3><a href="news-detail.html">Review Annual Medical Research</a></h3>
+                                   <p>Vivamus non nulla semper diam cursus maximus. Pellentesque dignissim.</p>
+                                   <div class="author">
+                                        <img src="{{ url_for('static', filename='img/images/author-image.jpg') }}" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+               </div>
+          </div>
+     </section>
 
      <!-- MAKE AN APPOINTMENT -->
      <section id="appointment" data-stellar-background-ratio="3">
@@ -394,7 +472,7 @@ http://www.tooplate.com/view/2098-health
                                         <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone">
                                         <label for="Message">Additional Message</label>
                                         <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"></textarea>
-                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit Button</button>
+                                        <button type="submit" class="form-control" id="cf-submit" name="submit">Submit</button>
                                    </div>
                               </div>
                         </form>
@@ -413,7 +491,8 @@ http://www.tooplate.com/view/2098-health
             3. Click "Share" and choose "Embed map" tab
             4. Copy only URL and paste it within the src="" field below
 	-->
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.3030413476204!2d100.5641230193719!3d13.757206847615207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf51ce6427b7918fc!2sG+Tower!5e0!3m2!1sen!2sth!4v1510722015945" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.776122794972!2d77.2931882760092!3d28.63647118390083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfb696c0d4f43%3A0xa7ba08a0eb105563!2sSuit%20Up%20by%20Kailash%20Talreja%20-%20Best%20Suit%20Tailors%20in%20Delhi!5e0!3m2!1sen!2sin!4v1710937733101!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
      </section>           
 
 
@@ -428,8 +507,8 @@ http://www.tooplate.com/view/2098-health
                               <p>Fusce at libero iaculis, venenatis augue quis, pharetra lorem. Curabitur ut dolor eu elit consequat ultricies.</p>
 
                               <div class="contact-info">
-                                   <p><i class="fa fa-phone"></i> 010-070-0170</p>
-                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@company.com</a></p>
+                                   <p><i class="fa fa-phone"></i> +91-7973813898</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">info@gmail.com</a></p>
                               </div>
                          </div>
                     </div>
