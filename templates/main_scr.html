@@ -23,7 +23,69 @@
     
 
      <style>
+          .fab {
+               font-family: "Font Awesome 5 Brands";
+               font-weight: 400;
 
+               -webkit-font-smoothing: antialiased;
+               display: inline-block;
+               font-style: normal;
+               font-variant: normal;
+               text-rendering: auto;
+               line-height: 1;
+               }
+          .fa-facebook-f:before {
+               content: "\f39e";
+          }
+
+          .site-footer__social a {
+               position: relative;
+               height: 50px;
+               width: 50px;
+               display: -webkit-box;
+               display: -ms-flexbox;
+               display: flex;
+               -webkit-box-align: center;
+               -ms-flex-align: center;
+               align-items: center;
+               -webkit-box-pack: center;
+               -ms-flex-pack: center;
+               justify-content: center;
+               text-align: center;
+               color: #CE5079;
+               font-size: 15px;
+               border-radius: 50%;
+               background-color: #2e2626;
+               overflow: hidden;
+               -webkit-transition: all 500ms ease;
+               transition: all 500ms ease;
+               z-index: 1;
+               }
+          .site_footer_social a:after {
+               position: absolute;
+               content: "";
+               top: 0;
+               left: 0;
+               right: 0;
+               height: 100%;
+               background-color: #CE5079;
+               -webkit-transition-delay: 0.1s;
+               transition-delay: 0.1s;
+               -webkit-transition-timing-function: ease-in-out;
+               transition-timing-function: ease-in-out;
+               -webkit-transition-duration: 0.4s;
+               transition-duration: 0.4s;
+               -webkit-transition-property: all;
+               transition-property: all;
+               opacity: 1;
+               -webkit-transform-origin: top;
+               transform-origin: top;
+               -webkit-transform-style: preserve-3d;
+               transform-style: preserve-3d;
+               -webkit-transform: scaleY(0);
+               transform: scaleY(0);
+               z-index: -1;
+               }
      </style>
 
 </head>
@@ -137,23 +199,23 @@
 
      <!-- WHY -->
      <section id="why">
-          <div class="container">
+          <div class="container" style="">
                <div class="row">
 
                     <div class="col-md-6 col-sm-6">
-                         <div class="about-info">
+                         <div class="why-info">
                               <h2 class="wow fadeInUp section-title_title" data-wow-delay="0.6s">Why Theraply <span>?</span></h2>
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p style="font-family: 'Poppins', serif; font: weight 400px; font-size:22px; padding:10px; color:black; background-color:rgba(255,255,255, 0.1); border-radius: 10px; ">If you are starting with the therapy for the first time, Congratulations! You’ve taken a huge step towards caring for yourself. Taking therapy is an empowering choice, a commitment to your own wellbeing and a step towards a healthier, happier you. Remember taking the first step toward therapy is a courageous decision and we are here to support you every step of the way. At Theraply your mental well being is our priority and together we can build a foundation for a brighter and healthier future. With Theraply you rewrite your story for empowerment and your brighter tomorrow starts here. </p>
                               </div>
-                              <a class="button appointment-btn center" href="#appointment" style="background-color: #CE5079;color: #9BD4CB;"> Make an Appointment
+                              <a class="button appointment-btn center" href="#appointment" style="background-color: #CE5079;color: #9BD4CB; margin-left: 150px; border-radius: 5px; padding:10px"> Make an Appointment
                                    
                               </a>
                               
                          </div>
                     </div>
                     <div class = "col-md-6 col-sm-6">
-                         <img src="{{ url_for('static', filename='img/images/about-four-img-1.jpg') }}" class="img-responsive" alt="">
+                         <img src="{{ url_for('static', filename='img/images/about-four-img-1.jpg') }}" class="img-responsive" alt="about-img-1" style="border-radius: 10px;">
                     </div>
                     
                </div>
@@ -161,8 +223,8 @@
      </section>
 
      <!-- ABOUT -->
-     <section id="about">
-          <div class="container">
+     <section id="about" >
+          <div class="container" style="">
                <div class="row">
 
                     <div class="col-md-6 col-sm-6">
@@ -547,10 +609,12 @@
                                    <p>Sunday <span>Closed</span></p>
                               </div> 
 
-                              <ul class="social-icon">
-                                   <li><a href="https://www.facebook.com/tooplate" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              <ul class="social-icon site_footer_social">
+                                   <li><a href="https://www.facebook.com/theraply"><i class="fab fa-facebook-f" attr="facebook icon"></i>
+                                        </a></li>
+                                   
+                                   <li><a href="https://www.twitter.com/theraply" class="fa fa-twitter"></a></li>
+                                   <li><a href="https://www.instagram.com/theraply" class="fa fa-instagram"></a></li>
                               </ul>
                          </div>
                     </div>

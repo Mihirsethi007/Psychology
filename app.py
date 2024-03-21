@@ -18,9 +18,9 @@ def btsp():
 def demo():
     return render_template('demo1.html')
 
-@app.route('/index4')
+@app.route('/')
 def id4():
-    return render_template('index4.html')
+    return render_template('main_scr.html')
  
 if __name__ == "__main__":
     app.run()
