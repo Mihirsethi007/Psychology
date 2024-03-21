@@ -479,7 +479,7 @@ shades from logo
     /* background-color: #e989a9; */
     /* background-color: #D95988; */
     /* background-color: #A3D9CF; */
-    background: url('/static/img/background_img/tabs-one-shape-1.png'), linear-gradient(to top right, #A3D9CF , rgba(255,255,255,0.5));
+    background: linear-gradient(to top right, #A3D9CF , rgba(255,255,255,0.5));
     /* background: url('/static/img/images/about-four-img-1.jpg')  no-repeat top center; */
     background-size: cover;
     /* background-position: center; */
