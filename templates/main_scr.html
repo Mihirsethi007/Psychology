@@ -21,6 +21,209 @@
      <link rel="stylesheet" href="{{ url_for('static', filename='css/css/font-awesome.min.css') }}">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+     <style>
+          /*--------------------------------------------------------------
+# Tabs One
+--------------------------------------------------------------*/
+.tabs-one {
+  position: relative;
+  display: block;
+  margin-top: -60px;
+  z-index: 2;
+}
+
+.tabs-one__inner {
+  position: relative;
+  display: block;
+  border-radius: 6px;
+  /* background-image: linear-gradient(to top right, #CE5079 , rgba(255, 255, 255, 0.025)); */
+  background-color: #cc6789;
+  box-shadow: 0px 10px 60px 0px rgba(240, 138, 138, 0.912);
+  padding: 60px 60px 60px;
+  z-index: 1;
+}
+
+.tabs-one__shape-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.06;
+}
+
+.tabs-one__shape-1 img {
+  width: auto;
+}
+
+.tabs-one__inner .tab-buttons {
+  position: relative;
+  display: block;
+}
+
+.tabs-one__inner .tab-buttons .tab-btn {
+  position: relative;
+  display: inline-block;
+}
+
+.tabs-one__inner .tab-buttons .tab-btn+.tab-btn {
+  margin-left: 5px;
+}
+
+.tabs-one__inner .tab-buttons .tab-btn span {
+  position: relative;
+  display: block;
+  text-align: center;
+  transition: all 200ms linear;
+  transition-delay: 0.1s;
+  font-size: 17px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: #CE5079;
+  padding: 20px 30px 23px;
+  border-radius: 6px;
+  font-weight: 400;
+  cursor: pointer;
+  font-family: "Castoro", serif;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.tabs-one__inner .tab-buttons .tab-btn.active-btn span {
+  /* color: #1a1414; */
+  color:#CE5079;
+  
+}
+
+.tabs-one__inner .tab-buttons .tab-btn span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0%;
+  content: "";
+  background-color: #ffffff;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.tabs-one__inner .tab-buttons .tab-btn.active-btn span:before {
+  height: 100%;
+  color:#CE5079;
+  background-image: linear-gradient(to top right, #A3D9CF , rgba(255,255,255,0.5));
+}
+
+.tabs-one__inner .tabs-content {
+  position: relative;
+  display: block;
+}
+
+.tabs-one__inner .tabs-content .tab {
+  position: relative;
+  display: none;
+  -webkit-transform: translateY(35px);
+  -ms-transform: translateY(35px);
+  transform: translateY(35px);
+  -webkit-transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  transition: all 600ms ease;
+  z-index: 10;
+}
+
+.tabs-one__inner .tabs-content .tab.active-tab {
+  display: block;
+  margin-top: 0px;
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  transform: translateY(0px);
+
+}
+
+.tabs-one__tab-content-inner {
+  position: relative;
+  display: flex;
+  margin-top: 30px;
+}
+
+.tabs-one__tab-content-left {
+  position: relative;
+  display: flex;
+}
+
+.tabs-one__img {
+  position: relative;
+  display: block;
+  max-width: 310px;
+  width: 100%;
+}
+
+div.tabs-one__img img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.tabs-one__content {
+  position: relative;
+  display: block;
+  margin-left: 30px;
+  margin-top: -6px;
+}
+
+.tabs-one__content h3 {
+  font-size: 24px;
+  line-height: 34px;
+  color: #ffffff;
+}
+
+.tabs-one__content p {
+  color: #dd9ab1;
+  margin-top: 11px;
+}
+
+.tabs-one__points {
+  position: relative;
+  display: block;
+  margin-left: 37px;
+  margin-top: 39px;
+}
+
+.tabs-one__points li {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.tabs-one__points li .icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  background-color: #CE5079;
+  border-radius: 50%;
+  top: 1px;
+}
+
+.tabs-one__points li .icon span {
+  position: relative;
+  display: inline-block;
+  font-size: 10px;
+  color: #c26886;
+}
+
+.tabs-one__points li .text {
+  margin-left: 17px;
+}
+
+.tabs-one__points li .text p {
+  font-size: 17px;
+  color: #ffffff;
+}
+
+     </style>
 
      <style>
           .fab {
@@ -88,6 +291,8 @@
                }
      </style>
 
+     <script src="{{ url_for('static', filename='js/add_on.js') }}" ></script>
+
 </head>
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
@@ -145,7 +350,7 @@
                         <li><a href="#top" class="smoothScroll " style=" color:white">Home</a></li>
                         <li><a href="#why" class="smoothScroll " style=" color:white">Why Theraply</a></li>
                         <li><a href="#about" class="smoothScroll " style=" color:white">About Us</a></li>
-                        <li><a href="#team" class="smoothScroll " style=" color:white">Services</a></li>
+                        <li><a href="#services" class="smoothScroll " style=" color:white">Services</a></li>
                          <li><a href="#news" class="smoothScroll " style=" color:white">Resources</a></li>
                          <li><a href="#testimonials" class="smoothScroll " style=" color:white">Testimonials</a></li>
                          <li class="appointment-btn "><a href="#appointment" style=" color:white">Make an appointment</a></li>
@@ -167,7 +372,7 @@
                                         <div class="col-md-offset-1 col-md-10">
                                              <h3>The best project you will ever work on is yourself.</h3>
                                              <h1>Healthy Living</h1>
-                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Meet Our Therapist</a>
+                                             <a href="#" class="section-btn btn btn-default smoothScroll">Meet Our Therapist</a>
                                         </div>
                                    </div>
                               </div>
@@ -208,7 +413,7 @@
                               <div class="wow fadeInUp" data-wow-delay="0.8s">
                                    <p style="font-family: 'Poppins', serif; font: weight 400px; font-size:22px; padding:10px; color:black; background-color:rgba(255,255,255, 0.1); border-radius: 10px; ">If you are starting with the therapy for the first time, Congratulations! You’ve taken a huge step towards caring for yourself. Taking therapy is an empowering choice, a commitment to your own wellbeing and a step towards a healthier, happier you. Remember taking the first step toward therapy is a courageous decision and we are here to support you every step of the way. At Theraply your mental well being is our priority and together we can build a foundation for a brighter and healthier future. With Theraply you rewrite your story for empowerment and your brighter tomorrow starts here. </p>
                               </div>
-                              <a class="button appointment-btn center" href="#appointment" style="background-color: #CE5079;color: #9BD4CB; margin-left: 150px; border-radius: 5px; padding:10px"> Make an Appointment
+                              <a class="appointment-btn center" href="#appointment" style="background-color: #CE5079;color: #9BD4CB; margin-left: 150px; border-radius: 5px; padding:10px; "> Make an Appointment
                                    
                               </a>
                               
@@ -248,13 +453,13 @@
      </section>
 
 
-     <!-- TEAM -->
-     <section id="team" data-stellar-background-ratio="1">
+     <!-- Services -->
+     <section id="services" data-stellar-background-ratio="1">
           <div class="container">
                <div class="row">
 
                     <div class="col-md-6 col-sm-6">
-                         <div class="about-info">
+                         <div class="services-info">
                               <h2 class="wow fadeInUp" data-wow-delay="0.1s">How therapy session look like?</h2>
                          </div>
                     </div>
@@ -283,10 +488,10 @@
 
                     <div class="col-md-4 col-sm-6">
                          <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
-                              <img src="{{ url_for('static', filename='img/images/team-image2.jpg') }}" class="img-responsive" alt="">
+                              <!-- <img src="{{ url_for('static', filename='img/images/team-image2.jpg') }}" class="img-responsive" alt=""> -->
 
                                    <div class="team-info">
-                                        <h3>Parental counseling </h3>
+                                        <h3>Parental Counseling </h3>
                                         <!-- <p>Pregnancy</p>
                                         <div class="team-contact-info">
                                              <p><i class="fa fa-phone"></i> 010-070-0170</p>
@@ -326,6 +531,197 @@
           </div>
      </section>
 
+          <!--Tabs One Start-->
+          <section class="tabs-one">
+               <div class="container">
+                    <div class="tabs-one__inner tabs-box">
+                         <div class="tabs-one__shape-1 float-bob-x">
+                              <img decoding="async"
+                                   src="https://delogiswp.pixydrops.com/wp-content/uploads/2023/05/tabs-one-shape-1.png" alt="alt"
+                                   title="tabs-one-shape-1">
+                         </div>
+                         <ul class="tab-buttons clearfix list-unstyled ml-0">
+                              <li data-tab="#tab_one1" class="tab-btn active-btn"><span>Individual Therapy</span>
+                              </li>
+                              <li data-tab="#tab_one2" class="tab-btn "><span>Parental Counseling</span>
+                              </li>
+                              <li data-tab="#tab_one3" class="tab-btn "><span>Early Intervention</span>
+                              </li>
+                         </ul>
+          
+                         <div class="tabs-content">
+                              <!--tab-->
+                              <div class="tab active-tab" id="tab_one1">
+                                   <div class="tabs-one__tab-content-inner">
+                                        <div class="tabs-one__tab-content-left">
+                                             <div class="tabs-one__img">
+                                                  <img decoding="async"
+                                                       src="https://delogiswp.pixydrops.com/wp-content/uploads/2023/05/tabs-1-1.jpg"
+                                                       alt="alt" title="tabs-1-1">
+                                             </div>
+                                             <div class="tabs-one__content">
+                                                  <h3 class="">Individual Therapy</h3>
+                                                  <p class="">We focus on addressing personal challenges,<br> improving mental health,<br>
+                                                        and fostering personal growth through<br>
+                                                         exploration of thoughts, emotions,<br>
+                                                          and behaviors in a confidential setting.
+                                                       </p>
+                                             </div>
+                                        </div>
+                                        <div class="tabs-one__points">
+                                             <ul class="tabs-one__points-list list-unstyled ml-0">
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Nsectetur cing elit</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Suspe ndisse suscip sagittis leo</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Entum estib dignissim posuere</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>If you are going to use a pass</p>
+                                                       </div>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!--tab-->
+                              <!--tab-->
+                              <div class="tab " id="tab_one2">
+                                   <div class="tabs-one__tab-content-inner">
+                                        <div class="tabs-one__tab-content-left">
+                                             <div class="tabs-one__img">
+                                                  <img decoding="async"
+                                                       src="https://delogiswp.pixydrops.com/wp-content/uploads/2023/05/tabs-1-1.jpg"
+                                                       alt="alt" title="tabs-1-1">
+                                             </div>
+                                             <div class="tabs-one__content">
+                                                  <h3 class=" ">Parental Counseling</h3>
+                                                  <p class=" ">There are many variations of passages of <br> available but simply
+                                                       free text available in the <br> market sit amed majority alteration in some
+                                                       form, <br> by humouor.</p>
+                                             </div>
+                                        </div>
+                                        <div class="tabs-one__points">
+                                             <ul class="tabs-one__points-list list-unstyled ml-0">
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Nsectetur cing elit</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Suspe ndisse suscip sagittis leo</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Entum estib dignissim posuere</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>If you are going to use a pass</p>
+                                                       </div>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!--tab-->
+                              <!--tab-->
+                              <div class="tab " id="tab_one3">
+                                   <div class="tabs-one__tab-content-inner">
+                                        <div class="tabs-one__tab-content-left">
+                                             <div class="tabs-one__img">
+                                                  <img decoding="async"
+                                                       src="https://delogiswp.pixydrops.com/wp-content/uploads/2023/05/tabs-1-1.jpg"
+                                                       alt="alt" title="tabs-1-1">
+                                             </div>
+                                             <div class="tabs-one__content">
+                                                  <h3 class="  ">Early Intervention</h3>
+                                                  <p class="  ">There are many variations of passages of <br> available but simply
+                                                       free text available in the <br> market sit amed majority alteration in some
+                                                       form, <br> by humouor.</p>
+                                             </div>
+                                        </div>
+                                        <div class="tabs-one__points">
+                                             <ul class="tabs-one__points-list list-unstyled ml-0">
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Nsectetur cing elit</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Suspe ndisse suscip sagittis leo</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>Entum estib dignissim posuere</p>
+                                                       </div>
+                                                  </li>
+                                                  <li>
+                                                       <div class="icon">
+                                                            <span class="fa fa-check"></span>
+                                                       </div>
+                                                       <div class="text">
+                                                            <p>If you are going to use a pass</p>
+                                                       </div>
+                                                  </li>
+                                             </ul>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!--tab-->
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!--Tabs One End -->
 
      <!-- NEWS -->
      <section id="news" data-stellar-background-ratio="2.5">
@@ -653,6 +1049,8 @@
      <script src="{{ url_for('static', filename='js/js/smoothscroll.js') }}"></script>
      <script src="{{ url_for('static', filename='js/js/owl.carousel.min.js') }}"></script>
      <script src="{{ url_for('static', filename='js/js/custom.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/add_on.js') }}" ></script>
+
 
 </body>
 </html>

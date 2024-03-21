@@ -193,7 +193,7 @@ shades from logo
   }
 
 
-  #about, #team, #news,
+  #about, #services, #news,
   #news-detail {
     position: relative;
     padding-top: 100px;
@@ -493,7 +493,18 @@ shades from logo
       padding-bottom: 150px;
     
   }
-
+/*---------------------------------------
+      WHY              
+  -----------------------------------------*/
+  #services {
+    
+    /* background: linear-gradient(to bottom left, #A3D9CF , rgba(255,255,255,0.5)); */
+    background-color:#A3D9CF ;
+    background-size: cover;
+    /* background-position: center; */
+    padding-top: 100px;
+    padding-bottom: 150px;
+  }
   /*---------------------------------------
       ABOUT              
   -----------------------------------------*/
